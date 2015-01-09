@@ -1,0 +1,5 @@
+= form_for @about, :html => { :class => 'form-horizontal', :role => 'form'} do |f|
+  .col-sm-8
+    = f.label "Content"
+    = f.text_area :content
+    = f.submit 'Save'

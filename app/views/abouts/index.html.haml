@@ -1,0 +1,13 @@
+.row
+  .col-sm-12
+    .col-sm-2
+      = render "shared/sidemenu_abouts"
+    .col-sm-7
+      .well
+        %table
+          %tbody
+            - @abouts.each do |about|
+              %tr
+                %td= about.content
+                %td= link_to raw("<span class = 'glyphicon glyphicon-edit'></span>"), edit_about_path(about), :class => 'btn btn-warning btn-sm', :title => "Edit"
+              

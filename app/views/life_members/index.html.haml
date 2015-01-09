@@ -1,0 +1,56 @@
+.row
+  .col-sm-12
+    .col-sm-2
+      = render "shared/sidemenu_abouts"
+    .col-sm-7
+      %center 
+        %h3
+          .red
+            Profile of HMVS
+  
+        .btn-group.btn-group-justified{"aria-label" => "...", :role => "group"}
+          .btn-group{:role => "group"}
+            = link_to 'Life Members of HMVS' , life_members_path, :class => 'btn btn-primary'
+          .btn-group{:role => "group"}
+            = link_to 'Office Bearers of HMVS', office_bearers_path, :class => 'btn btn-warning'
+          .btn-group{:role => "group"}
+            = link_to 'Governing Council Members', '#', :class => 'btn btn-success'
+      %br
+      .pull-left
+        %h3
+          List of Members of HMVS
+      .pull-right
+        
+        %button.btn.btn-warning.btn-sm{"data-target" => ".bs-example-modal-lg", "data-toggle" => "modal", :type => "button"} 
+          %span.glyphicon.glyphicon-edit
+        .modal.fade.bs-example-modal-lg{ :tabindex => "-1", :role => "dialog", "aria-labelledby" => "myLargeModalLabel", "aria-hidden" => "true"}
+          .modal-dialog.modal-lg
+            .modal-content
+              .modal-header
+                %button{:class => "close", "data-dismiss" => "modal", "aria-hidden" => "true"} &times;
+                %h4.modal-title{:id => "myModalLabel"} Add new 
+              = form_for @life_member, :html => {:class => "form-horizontal", :role => "form"} do |f|
+                .modal-body
+                  .form-group
+                    .col-sm-12
+                      .col-sm-6
+                        = f.label 'Name of the Member', :class => 'control-label'
+                        %br
+                        = f.label 'Time Period', :class => 'control-label'
+                      .col-sm-6
+                        = f.text_field :name, :class => 'form-control'
+                        = f.text_field :period, :class => 'form-control'
+                .modal-footer
+                  = f.submit 'Save', :class => 'btn btn-primary'
+      %table.table.table-bordered.table-condensed.table-striped.table-hovered{:style => "width:100%;"}
+        %thead
+          %tr
+            %th{:style => "width:50%;"} Name of the Member
+            %th Time Period
+        %tbody
+          - @life_members.each do |life_member|
+            %tr
+              %td= life_member.name
+              %td= life_member.period
+              
+              
