@@ -13,8 +13,8 @@ Rails.application.routes.draw do
 
   resources :life_members 
   resources :office_bearers
-
-
+  resources :council_members
+  resources :former_principals
 
 
 

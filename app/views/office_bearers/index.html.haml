@@ -14,15 +14,15 @@
           .btn-group{:role => "group"}
             = link_to 'Office Bearers of HMVS', office_bearers_path, :class => 'btn btn-warning'
           .btn-group{:role => "group"}
-            = link_to 'Governing Council Members', '#', :class => 'btn btn-success'
+            = link_to 'Governing Council Members', council_members_path, :class => 'btn btn-success'
       %br
       .pull-left
         %h3
-          Office Bearers of HMVS
+          List of Office Bearers of HMVS
       .pull-right
         
-        %button.btn.btn-warning.btn-sm{"data-target" => ".bs-example-modal-lg", "data-toggle" => "modal", :type => "button"} 
-          %span.glyphicon.glyphicon-edit
+        %button.btn.btn-primary.btn-sm{"data-target" => ".bs-example-modal-lg", "data-toggle" => "modal", :type => "button"} 
+          %span.glyphicon.glyphicon-saved
         .modal.fade.bs-example-modal-lg{ :tabindex => "-1", :role => "dialog", "aria-labelledby" => "myLargeModalLabel", "aria-hidden" => "true"}
           .modal-dialog.modal-lg
             .modal-content
@@ -34,9 +34,9 @@
                   .form-group
                     .col-sm-12
                       .col-sm-6
-                        = f.label 'Position Held', :class => 'control-label'
+                        = f.label 'Name', :class => 'control-label'
                         %br
-                        = f.label 'Time Period', :class => 'control-label'
+                        = f.label 'Position', :class => 'control-label'
                         %br
                         = f.label 'Year (From - To)', :class => 'control-label'
                       .col-sm-6
@@ -45,6 +45,9 @@
                         = f.text_field :year, :class => 'form-control'
                 .modal-footer
                   = f.submit 'Save', :class => 'btn btn-primary'
+
+
+
       %table.table.table-bordered.table-condensed.table-striped.table-hovered{:style => "width:100%;"}
         %thead
           %tr

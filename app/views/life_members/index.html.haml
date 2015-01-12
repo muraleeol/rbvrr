@@ -14,15 +14,15 @@
           .btn-group{:role => "group"}
             = link_to 'Office Bearers of HMVS', office_bearers_path, :class => 'btn btn-warning'
           .btn-group{:role => "group"}
-            = link_to 'Governing Council Members', '#', :class => 'btn btn-success'
+            = link_to 'Governing Council Members', council_members_path, :class => 'btn btn-success'
       %br
       .pull-left
         %h3
           List of Members of HMVS
       .pull-right
         
-        %button.btn.btn-warning.btn-sm{"data-target" => ".bs-example-modal-lg", "data-toggle" => "modal", :type => "button"} 
-          %span.glyphicon.glyphicon-edit
+        %button.btn.btn-primary.btn-sm{"data-target" => ".bs-example-modal-lg", "data-toggle" => "modal", :type => "button"} 
+          %span.glyphicon.glyphicon-saved
         .modal.fade.bs-example-modal-lg{ :tabindex => "-1", :role => "dialog", "aria-labelledby" => "myLargeModalLabel", "aria-hidden" => "true"}
           .modal-dialog.modal-lg
             .modal-content
@@ -52,5 +52,4 @@
             %tr
               %td= life_member.name
               %td= life_member.period
-              
               
