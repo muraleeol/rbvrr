@@ -1,0 +1,2 @@
+module LifeMembersHelper
+end
