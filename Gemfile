@@ -1,10 +1,4 @@
 source 'https://rubygems.org'
-
-gem 'bootstrap-sass', '~> 3.0.3.0'
-gem 'haml-rails'
-gem 'bootstrap', '~> 0.0.1'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use postgresql as the database for Active Record
@@ -47,3 +41,5 @@ gem "haml-rails"
 
 # For Bootstrap
 gem 'bootstrap-sass', '~> 3.0.3.0'
+
+gem 'bootstrap', '~> 0.0.1'
