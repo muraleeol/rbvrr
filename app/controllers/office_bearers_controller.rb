@@ -1,6 +1,7 @@
 class OfficeBearersController < ApplicationController
   def index
-    @office_bearers = OfficeBearer.all
+    @office_bearers = OfficeBearer.find_by_sql "select t.name, t.position, t.year from office_bearers t INNER JOIN (SELECT position, max(year) AS MaxYear from office_bearers group by position) q ON t.position = q.position AND t.year = q.MaxYear;
+"
     @office_bearer = OfficeBearer.new
   end
   

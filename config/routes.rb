@@ -8,10 +8,9 @@ Rails.application.routes.draw do
   end
 
   resources :life_members 
-  get 'life_members/index'
-
   resources :office_bearers
-  get 'office_bearers/index'
+  resources :council_members
+
 
   resources :admin do
     collection do
