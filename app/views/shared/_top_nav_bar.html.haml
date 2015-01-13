@@ -1,1 +1,43 @@
-nav bar
+%nav.navbar.navbar-default{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "#"} About Us
+  %div
+    %ul.nav.navbar-nav
+      %li.active
+        %a{:href => "#"} ORG CHART
+      %li
+        %a{:href => "#"} PROGRAM
+      %li.dropdown
+        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+          Academics
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href => "#"} A
+          %li
+            %a{:href => "#"} B
+          %li
+            %a{:href => "#"} C
+          %li.divider
+          %li
+            %a{:href => "#"} D
+          %li.divider
+          %li
+            %a{:href => "#"} E
+      %li.dropdown
+        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+          Departments
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href => "#"} A
+          %li
+            %a{:href => "#"} B
+          %li
+            %a{:href => "#"} C
+          %li.divider
+          %li
+            %a{:href => "#"} D
+          %li.divider
+          %li
+            %a{:href => "#"} E

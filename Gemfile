@@ -35,7 +35,8 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-#################################################################################
+
+################################################################################################
 # For HAML
 gem "haml-rails"
 
@@ -43,3 +44,6 @@ gem "haml-rails"
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
 gem 'bootstrap', '~> 0.0.1'
+
+#For AngularJs
+gem 'angularjs-rails', '~> 1.3.8'

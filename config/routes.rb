@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  
-  get 'office_bearers/index'
+  root 'home#index' 
 
-  get 'life_members/index'
-
-  root 'home#index'
   resources :abouts do
     collection do
       get 'profile'
@@ -12,12 +8,17 @@ Rails.application.routes.draw do
   end
 
   resources :life_members 
+  get 'life_members/index'
+
   resources :office_bearers
+  get 'office_bearers/index'
 
-
-
-
-
+  resources :admin do
+    collection do
+      get 'custom_banner'
+    end
+  end
+  get 'admin/custom_banner'
    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
